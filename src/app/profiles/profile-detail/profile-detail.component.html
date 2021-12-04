@@ -1,0 +1,28 @@
+<div class="page">
+	<header class="page__header">
+		<a class="btn btn--small btn__icon btn__icon-search" routerLink="/" title="Return to search page">Back</a>
+	</header>
+	
+	<div class="profile">
+		<header class="profile__header">
+			<img [src]="this.properties.avatar_url" [alt]="'Avatar image from ' + this.properties.login" class="profile__avatar" />
+			<div class="profile__user-info">
+				<div class="profile__name">{{ this.properties.login }}</div>
+				<a class="profile__email" [href]="!!this.properties.email ? this.properties.email : this.properties.blog">{{ !!this.properties.email ? this.properties.email : this.properties.blog }}</a>
+				<div class="profile__bio" *ngIf="!!this.properties.bio">{{ this.properties.bio }}</div>
+			</div>
+		</header>
+		<div class="profile__repo-list">
+			<div class="profile__repo-item" *ngFor="let repo of repos">
+				<header class="profile__repo-header">
+					<div class="profile__repo-name">{{ repo.name }}</div>
+					<a class="btn btn--small btn__icon btn__icon-link" [href]="repo.html_url" target="_blank">{{ repo.html_url }}</a>
+				</header>
+				<div class="profile__repo-info">
+					<div class="profile__repo-description">{{ repo.description }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,48 @@
+.search {
+  height: calc(100vh - 2em);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  text-align: center;
+  margin: 0 0 0.5em;
+
+  span {
+    color: var(--color-main);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -2px;
+  }
+}
+
+.field {
+  &__holder {
+    position: relative;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 0.25em;
+  }
+
+  &__input {
+    font-size: 1em;
+    padding: 0.5em;
+    border: 1px solid #cccccc;
+    height: 3em;
+  }
+}
+
+.message {
+  color: var(--color-main);
+  margin-top: 0.5em;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1em;
+}

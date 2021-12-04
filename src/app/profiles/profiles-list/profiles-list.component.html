@@ -1,0 +1,25 @@
+<div class="search">
+  <form
+    #searchForm="ngForm"
+    class="search__holder"
+    (ngSubmit)="goToProfile($event, searchProfile.value)"
+  >
+    <h1 class="main-title"><span>TPE</span> Search</h1>
+    <div class="field__holder">
+      <label class="field__label" for="searchProfile"
+        >Pesquise um perfil do GitHub
+      </label>
+      <input
+        class="field__input"
+        type="text"
+        id="searchProfile"
+        placeholder="Digite um usuário"
+        #searchProfile
+      />
+      <button class="btn btn--huge" type="submit">Pesquisar</button>
+    </div>
+    <div class="message" *ngIf="!thereAreResults">
+      Não foi possível encontrar este perfil. Digite um perfil válido.
+    </div>
+  </form>
+</div>

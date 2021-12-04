@@ -1,0 +1,74 @@
+.page {
+  &__header,
+  .profile {
+    margin: 2em auto;
+    width: calc(100% - 2em);
+    max-width: 1200px;
+
+    &__avatar {
+      width: 4em;
+      height: 4em;
+      margin-right: 1em;
+    }
+
+    &__header {
+      display: flex;
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 1em;
+    }
+
+    &__name {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    &__email {
+      display: inline-block;
+      margin-top: 0.5em;
+      color: var(--color-action);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__bio {
+      margin-top: 1em;
+    }
+
+    &__repo-list {
+      width: calc(100% + 1em);
+      margin: 1em -0.5em 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__repo-item {
+      width: calc(100% / 3 - 1em);
+      margin: 0.5em;
+      border-radius: 0.5em;
+      border: 1px solid var(--color-action);
+
+      @media screen and (max-width: 768px) {
+        width: calc(50% - 1em);
+      }
+
+      @media screen and (max-width: 600px) {
+        width: calc(100% - 1em);
+      }
+    }
+
+    &__repo-header {
+      color: #ffffff;
+      padding: 1em;
+      background-color: var(--color-action);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__repo-info {
+      padding: 1em;
+    }
+  }
+}
